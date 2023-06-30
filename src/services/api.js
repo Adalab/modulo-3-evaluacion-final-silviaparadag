@@ -1,15 +1,21 @@
-// Fichero src/services/api.js
 const callToApi = () => {
-  // Llamamos a la API
-  return fetch('') // Este 5 es el id de Leia Skywalker
+  return fetch('https://rickandmortyapi.com/api/character/?page=19')
     .then((response) => response.json())
-    .then((response) => {
-      // Cuando responde la API podemos limpiar los datos aquí
-      const result = {
-        
-      };
-      return result;
-    });
+    .then((dataApi) => {
+      console.log(dataApi.results);
+      const cleanDataApi = dataApi.results.map( (characterApi) =>  { return {
+                id: characterApi.id,
+                name: characterApi.name,
+                species: characterApi.species,
+                image: characterApi.image,
+                status: characterApi.status,
+                origin: characterApi.origin.name,
+                episodes: characterApi.episode.length,
+           }
+        });
+        console.log(cleanDataApi);
+        return cleanDataApi;
+      });
 };
 
 export default callToApi;
