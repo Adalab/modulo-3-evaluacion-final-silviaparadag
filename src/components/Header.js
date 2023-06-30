@@ -1,11 +1,15 @@
 import '../styles/layout/Header.scss';
-import logo from '../images/rick_and_morty_logo.png'
 
 const Header = () => {
     
     return(
         <header className="header">
-          <img src={logo} alt="Rick and Morty" className='header__img' />
+          <h1 className='header__title'>
+            Hola mundo!
+          </h1>
+          <h3 className='header__subtitle'>
+            Abrir consola
+          </h3>
         </header>
     )
 }
