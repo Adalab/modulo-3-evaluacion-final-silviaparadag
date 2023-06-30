@@ -52,17 +52,17 @@ const App = ()  => {
 
   return (
         <div className="App"> 
-        <Header/>
-        <main className='main'>
-          <Filters 
-          searchByName={searchByName}  
-          searchByOrigin={searchByOrigin}
-          origins={origins} 
-          handleFilter={handleFilter} 
-          />
-          <CharacterList characterList={filteredCharacters}/>
-        </main>
-        <Footer/>
+          <Header/>
+          <main className='main'>
+            <Filters 
+            searchByName={searchByName}  
+            searchByOrigin={searchByOrigin}
+            origins={origins} 
+            handleFilter={handleFilter} 
+            />
+            <CharacterList characterList={filteredCharacters}/>
+          </main>
+          <Footer/>
         </div>
   );
 }

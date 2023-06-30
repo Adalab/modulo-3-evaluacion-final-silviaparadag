@@ -3,27 +3,17 @@
 .header {
     padding: 10px 10px 10px;
     text-align: center;
-    border-bottom: solid 2px lightgray;
-    margin-bottom: 20px;
+    //border-bottom: solid 2px lightgray;
+    //margin-bottom: 20px;
     font-family: $font-main;
-    background-image: url("../../images/rick_and_morty_bgd.jpeg");
+    background-image: linear-gradient(to bottom, #91cecebc 25%, #b4c4c4bc), url("../../images/rick_and_morty_bgd.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 
-    &__title {
-        color: gray;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 5px;
-    }
+    &__title {}
 
-    &__subtitle {
-        color: lightcoral;
-        font-size: 16px;
-        padding: 5px;
-    }
+    &__subtitle {}
 
 }

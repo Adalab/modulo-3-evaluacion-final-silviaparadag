@@ -1,5 +1,6 @@
 import FilterByOrigin from './FilterByOrigin';
 import FilterByName from './FilterByName';
+import FilterBySpecies from './FilterBySpecies';
 
 const Filters = ({searchByName, origins, searchByOrigin,handleFilter}) => {
 
@@ -19,6 +20,8 @@ return (
             origins={origins} 
             searchByOrigin={searchByOrigin} 
             handleFilter={handleFilter}/>
+
+            <FilterBySpecies/>
     </form>
 
 );
