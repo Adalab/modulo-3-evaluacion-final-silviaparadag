@@ -1,50 +1,65 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
 import Header from './Header';
+import Filters from './Filters';
 import CharacterList from './CharacterList';
 import Footer from './Footer';
+import ls from '../services/localStorage';
 import callToApi from '../services/api';
 //import {Link, Route, Routes} from 'react-router-dom';
 
 const App = ()  => {
-  const [characterList, setCharacterList] = useState([]);
+  const characterDataFromLs = ls.get('characters', [])
+
+  const [characterList, setCharacterList] = useState(characterDataFromLs);
   const [searchByName, setSearchByName] = useState('');
+  const [searchByOrigin, setSearchByOrigin] = useState('');
  
 
   useEffect( () => {
-    callToApi().then((cleanData) => {
-      setCharacterList(cleanData)
+    if (ls.get('characters', null) === null) { 
+    callToApi().then((cleanDataApi) => {
+      setCharacterList(cleanDataApi);
+
+      ls.set('characters', cleanDataApi)
     })
+  }
+  }, []);
 
-  }, [])
 
-  
-
-  const handleChangeSearchName = (ev) => {
-    setSearchByName(ev.target.value);
+  const handleFilter = ( varName, varValue ) => {
+    if (varName === 'name') {
+      setSearchByName(varValue);
+    } else if (varName === 'origin') {
+      setSearchByOrigin(varValue);
+    }
   };
 
-  const filteredCharacters = characterList.filter( (eachCharacter) => 
-  eachCharacter.name.toLowerCase().includes(searchByName.toLowerCase())
-  );
+
+  const filteredCharacters = characterList
+    .filter( (eachCharacter) => 
+  eachCharacter.name.toLowerCase().includes(searchByName.toLowerCase())).filter( (eachCharacter) => {
+    if (searchByOrigin === 'All') {
+      return true;
+    } else {
+      return eachCharacter.origin === searchByOrigin;
+    }
+  })
+
+  const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
+
+  // const origins = ['Krootabulon', "Kyle's Teenyverse", 'Detoxifier', 'Earth (Replacement Dimension)', 'Gazorpazorp' ];
 
   return (
         <div className="App"> 
         <Header/>
         <main className='main'>
-          <label className="form__label" htmlFor="search_name">
-              Nombre:
-              <input className="form__input-text" type="text" name="search_name" id="search_name" value={searchByName} onChange={handleChangeSearchName} />
-          </label>
-          <label className="form__label display-block" htmlFor="search_origin">
-              Planeta:
-              <select className="form__input-text" name="search_origin" id="search_origin" >
-                <option value="All">Todos</option>
-                <option value="Krootabulon">Krootabulon</option>
-                <option value="Kyle's Teenyverse">Kyle's Teenyverse</option>
-                <option value="Detoxifier">Detoxifier</option>
-              </select>
-            </label>
+          <Filters 
+          searchByName={searchByName}  
+          searchByOrigin={searchByOrigin}
+          origins={origins} 
+          handleFilter={handleFilter} 
+          />
           <CharacterList characterList={filteredCharacters}/>
         </main>
         <Footer/>
