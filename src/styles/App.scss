@@ -1,5 +1,7 @@
 @import './core/reset';
+@import './layout/Main';
 
 .App {
-    height: 100vh;
+    height: 100%;
+    background-color: rgba(101, 187, 198, 0.776);
 }
