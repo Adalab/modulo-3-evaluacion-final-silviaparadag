@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
+import CharacterDetailCard from './pages/CharacterDetailCard';
 import Footer from './Footer';
 import ls from '../services/localStorage';
 import callToApi from '../services/api';
-//import {Link, Route, Routes} from 'react-router-dom';
+import {Link, Routes, Route} from 'react-router-dom';
 
 const App = ()  => {
   const characterDataFromLs = ls.get('characters', [])
@@ -65,17 +66,21 @@ const App = ()  => {
   return (
         <div className="App"> 
           <Header/>
-          <main className='main'>
-            <Filters 
-            searchByName={searchByName}  
-            searchByOrigin={searchByOrigin}
-            searchBySpecies={searchBySpecies}
-            origins={origins} 
-            species={species}
-            handleFilter={handleFilter} 
-            />
-            <CharacterList characterList={filteredCharacters}/>
-          </main>
+          <Routes>
+              <Route path='/' element={
+                <main className='main'>
+                  <Filters 
+                      searchByName={searchByName}  
+                      searchByOrigin={searchByOrigin}
+                      searchBySpecies={searchBySpecies}
+                      origins={origins} 
+                      species={species}
+                      handleFilter={handleFilter} 
+                    />
+                    <CharacterList characterList={filteredCharacters}/>
+                 </main>}
+              />
+            </Routes>
           <Footer/>
         </div>
   );
