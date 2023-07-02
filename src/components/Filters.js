@@ -2,16 +2,15 @@ import FilterByOrigin from './FilterByOrigin';
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 
-const Filters = ({searchByName, origins, searchByOrigin,handleFilter}) => {
+const Filters = ({searchByName, origins, searchByOrigin, species, searchBySpecies, handleFilter}) => {
 
 
     const handleSubmit = (ev) => {
     ev.preventDefault();
         }
 
-return (
-
-    <form className="filters" onSubmit={handleSubmit} >
+    return (
+        <form className="filters" onSubmit={handleSubmit} >
             <FilterByName 
             searchByName={searchByName} 
             handleFilter={handleFilter}/>
@@ -21,10 +20,13 @@ return (
             searchByOrigin={searchByOrigin} 
             handleFilter={handleFilter}/>
 
-            <FilterBySpecies/>
-    </form>
+            <FilterBySpecies 
+            species={species} 
+            searchBySpecies={searchBySpecies} 
+            handleFilter={handleFilter}/>
+        </form>
 
-);
-}
+    );
+};
 
 export default Filters;
