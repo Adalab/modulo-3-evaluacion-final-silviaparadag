@@ -14,6 +14,7 @@ const App = ()  => {
   const [characterList, setCharacterList] = useState(characterDataFromLs);
   const [searchByName, setSearchByName] = useState('');
   const [searchByOrigin, setSearchByOrigin] = useState('');
+  const [searchBySpecies, setSearchBySpecies] = useState('');
  
 
   useEffect( () => {
@@ -30,25 +31,36 @@ const App = ()  => {
   const handleFilter = ( varName, varValue ) => {
     if (varName === 'name') {
       setSearchByName(varValue);
-    } else if (varName === 'origin') {
+    } if (varName === 'origin') {
       setSearchByOrigin(varValue);
+    } else if (varName === 'species') {
+      setSearchBySpecies(varValue);
     }
   };
 
 
   const filteredCharacters = characterList
     .filter( (eachCharacter) => 
-  eachCharacter.name.toLowerCase().includes(searchByName.toLowerCase())).filter( (eachCharacter) => {
+  eachCharacter.name.toLowerCase().includes(searchByName.toLowerCase()))
+    .filter( (eachCharacter) => {
     if (searchByOrigin === 'All') {
       return true;
     } else {
       return eachCharacter.origin === searchByOrigin;
     }
-  })
+  }).filter( (eachCharacter) => {
+    if (searchBySpecies === 'All') {
+      return true;
+    } else {
+      return eachCharacter.species === searchBySpecies;
+    }
+  });
 
   const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
 
   // const origins = ['Krootabulon', "Kyle's Teenyverse", 'Detoxifier', 'Earth (Replacement Dimension)', 'Gazorpazorp' ];
+
+  const species = characterList.map( (eachCharacter) => eachCharacter.species);
 
   return (
         <div className="App"> 
@@ -57,7 +69,9 @@ const App = ()  => {
             <Filters 
             searchByName={searchByName}  
             searchByOrigin={searchByOrigin}
+            searchBySpecies={searchBySpecies}
             origins={origins} 
+            species={species}
             handleFilter={handleFilter} 
             />
             <CharacterList characterList={filteredCharacters}/>

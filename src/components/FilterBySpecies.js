@@ -1,11 +1,21 @@
-const FilterBySpecies = () => {
+const FilterBySpecies = ({searchBySpecies, species, handleFilter}) => {
 
-return (
+    const handleChangeSearchSpecies = (ev) => {
+        handleFilter('species', ev.target.value);
+         };
+    const renderSpeciesOptions = () => {
+    return species.map( (eachSpecie, ind) =>  (<option key={ind} value={eachSpecie}>{eachSpecie}</option>));
+    };
+
+    return (
     <>
-    <label className="filters__label" htmlFor="search_name">Especie:</label>
-    <input className="filters__input--text" type="text" name="search_name" id="search_name" value='Especie'  />
+        <label className="filters__label" htmlFor="search_species">Especie:</label>
+        <select className="filters__input-text" name="search_species" id="search_species"  value={searchBySpecies} onChange={handleChangeSearchSpecies} >
+            <option value="All">Todas</option>
+            {renderSpeciesOptions()}
+        </select>
         </>
-);
-}
+    );
+};
 
 export default FilterBySpecies;

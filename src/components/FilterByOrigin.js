@@ -6,7 +6,7 @@ const FilterByOrigin = ({searchByOrigin, origins, handleFilter }) => {
 
     const renderOriginOptions = () => {
     return origins.map( (eachOrigin, ind) =>  (<option key={ind} value={eachOrigin}>{eachOrigin}</option>));
-};
+    };
 
     return (
     <label className="filters__label" htmlFor="search_origin">
