@@ -1,34 +1,45 @@
 import { Link } from 'react-router-dom';
 import NotFoundPage from './NotFoundPage';
 
-const CharacterDetailCard = ({characterData}) => {
-    if (characterData) {
+const CharacterDetailCard = ({characterSelected}) => {
+    if (characterSelected) {
     return (
    <article className='card__item'>
-        <img src={characterData.image} alt={characterData.name} className='card__item--img'/>
-        <h2 className='card__item--title'>{characterData.name}</h2>
-        <p className='card__item--text'>{characterData.species}</p>
-        <p className='card__item--text'>{characterData.origin}</p>
-        <p className='card__item--text'>Nº de episodios: {characterData.episodes}</p>
+        <img src={characterSelected.image} alt={characterSelected.name} className='card__item--img'/>
+        <h2 className='card__item--title'>{characterSelected.name}</h2>
+        <p className='card__item--text'>{characterSelected.species}</p>
+        <p className='card__item--text'>{characterSelected.status}</p>
+        <p className='card__item--text'>{characterSelected.origin}</p>
+        <p className='card__item--text'>Nº de episodios: {characterSelected.episodes}</p>
         <Link to="/">Volver</Link>
      </article>
-     );
+     )
     } else {
         return (
-            <div>
-                <NotFoundPage/>
-            </div>
+             <NotFoundPage/> 
         )
     }
 
 } 
 
 
+
 export default CharacterDetailCard;
 
 /* 
 
-}
+if (characterSelected) {}
+
+
+else {
+        return (
+             <NotFoundPage/> 
+        )
+    }
+
+
+
+
 else {
     return (
         <div>

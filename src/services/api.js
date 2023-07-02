@@ -16,6 +16,6 @@ const callToApi = () => {
         console.log(cleanDataApi);
         return cleanDataApi;
       });
-};
+}; 
 
 export default callToApi;
