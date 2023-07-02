@@ -1,18 +1,23 @@
-import '../styles/App.scss';
 import { useEffect, useState } from 'react';
+import {useLocation, matchPath} from 'react-router';
+import {Routes, Route} from 'react-router-dom';
+
+import ls from '../services/localStorage';
+import callToApi from '../services/api';
+
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
-import CharacterDetailCard from './pages/CharacterDetailCard';
+import CharacterDetailCard from './CharacterDetailCard';
+import NotFoundPage from './NotFoundPage';
 import Footer from './Footer';
-import ls from '../services/localStorage';
-import callToApi from '../services/api';
-import {Link, Routes, Route} from 'react-router-dom';
+
+import '../styles/App.scss';
 
 const App = ()  => {
-  const characterDataFromLs = ls.get('characters', [])
+  const characterSelectedFromLs = ls.get('characters', [])
 
-  const [characterList, setCharacterList] = useState(characterDataFromLs);
+  const [characterList, setCharacterList] = useState(characterSelectedFromLs);
   const [searchByName, setSearchByName] = useState('');
   const [searchByOrigin, setSearchByOrigin] = useState('');
   const [searchBySpecies, setSearchBySpecies] = useState('');
@@ -63,6 +68,23 @@ const App = ()  => {
 
   const species = characterList.map( (eachCharacter) => eachCharacter.species);
 
+
+    /* OBTENER INFO CONTACTO */ 
+    const {pathname} = useLocation();
+    console.log(pathname);
+
+    const routeData = matchPath('/character/:id', pathname);
+    console.log(routeData);
+
+
+    const characterId = routeData !== null ? routeData.params.id : null ;
+
+    console.log(characterId);
+
+    const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
+    console.log(characterSelected);
+   
+
   return (
         <div className="App"> 
           <Header/>
@@ -80,6 +102,8 @@ const App = ()  => {
                     <CharacterList characterList={filteredCharacters}/>
                  </main>}
               />
+              <Route path='/character/:id' element={<CharacterDetailCard characterSelected={characterSelected}/>}/>
+              <Route path='*' element={<NotFoundPage/>}/>
             </Routes>
           <Footer/>
         </div>
