@@ -19,15 +19,14 @@ const App = ()  => {
 
   const [characterList, setCharacterList] = useState(characterSelectedFromLs);
   const [searchByName, setSearchByName] = useState('');
-  const [searchByOrigin, setSearchByOrigin] = useState('');
-  const [searchBySpecies, setSearchBySpecies] = useState('');
+  const [searchByOrigin, setSearchByOrigin] = useState('All');
+  const [searchBySpecies, setSearchBySpecies] = useState('All');
  
 
   useEffect( () => {
     if (ls.get('characters', null) === null) { 
     callToApi().then((cleanDataApi) => {
       setCharacterList(cleanDataApi);
-
       ls.set('characters', cleanDataApi)
     })
   }
@@ -99,7 +98,7 @@ const App = ()  => {
                       species={species}
                       handleFilter={handleFilter} 
                     />
-                    <CharacterList characterList={filteredCharacters}/>
+                    <CharacterList characterList={filteredCharacters} searchByName={searchByName}/>
                  </main>}
               />
               <Route path='/character/:id' element={<CharacterDetailCard characterSelected={characterSelected}/>}/>

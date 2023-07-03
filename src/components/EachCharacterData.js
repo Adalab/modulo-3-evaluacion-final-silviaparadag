@@ -9,7 +9,6 @@ return (
             <h2 className='card__item--title'>{eachCharacterData.name}</h2>
             <p className='card__item--text'>{eachCharacterData.species}</p>
             <p className='card__item--text'>{eachCharacterData.origin}</p>
-            <p className='card__item--text'>Nº de episodios: {eachCharacterData.episodes}</p>
          </article>
      </Link>
 
