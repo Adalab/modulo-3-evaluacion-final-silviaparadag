@@ -7,8 +7,6 @@ import '../styles/layout/Landing.scss';
 const Landing = () => {
   return (
     <div className="landing">
-
-      {/* <img className='landing__img' src={logo}  alt="Rick and Morty"></img> */}
       <p className="landing__title">
         Discover more about
         <span className="landing__title--strong">Rick and Morty</span>

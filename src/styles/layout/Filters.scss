@@ -6,7 +6,7 @@
     padding: 20px 0px;
     border-radius: 20px;
     background-color: #b4c4c4bc;
-    box-shadow: 2px 4px 6px $color-secondary;
+    box-shadow: 1px 2px 3px $color-secondary;
 
     @include Tablet() {
         padding: 20px 20px;
@@ -48,6 +48,7 @@
             font-size: .95rem;
         }
 
+
     }
 
 
@@ -59,7 +60,8 @@
     &__input {
         width: 250px;
 
-        &--text {
+        &--text,
+        &--text2 {
             border: none;
             width: 150px;
             height: 30px;
@@ -83,8 +85,10 @@
             }
         }
 
-
-
+        &--text2 {
+            @include Tablet() {
+                width: 250px;
+            }
+        }
     }
-
 }

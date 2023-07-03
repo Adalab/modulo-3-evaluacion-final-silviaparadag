@@ -19,5 +19,11 @@
         padding: 5px;
         font-family: $font-main;
         font-weight: 400;
+
+        &--link {
+            text-decoration: none;
+            color: $color-primary5;
+        }
     }
+
 }
