@@ -2,7 +2,9 @@ import FilterByOrigin from './FilterByOrigin';
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 
-const Filters = ({searchByName, origins, searchByOrigin, species, searchBySpecies, handleFilter}) => {
+import '../styles/layout/Filters.scss';
+
+const Filters = ({searchByName, newOrigins, searchByOrigin, newSpecies, searchBySpecies, handleFilter}) => {
 
 
     const handleSubmit = (ev) => {
@@ -16,12 +18,12 @@ const Filters = ({searchByName, origins, searchByOrigin, species, searchBySpecie
             handleFilter={handleFilter}/>
 
             <FilterByOrigin  
-            origins={origins} 
+            newOrigins={newOrigins} 
             searchByOrigin={searchByOrigin} 
             handleFilter={handleFilter}/>
 
             <FilterBySpecies 
-            species={species} 
+            newSpecies={newSpecies} 
             searchBySpecies={searchBySpecies} 
             handleFilter={handleFilter}/>
         </form>

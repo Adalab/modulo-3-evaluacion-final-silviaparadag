@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom';
 import ls from '../services/localStorage';
 import callToApi from '../services/api';
 
+import Landing from './Landing';
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
@@ -61,45 +62,44 @@ const App = ()  => {
     }
   });
 
+
   const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
-
-  // const origins = ['Krootabulon', "Kyle's Teenyverse", 'Detoxifier', 'Earth (Replacement Dimension)', 'Gazorpazorp' ];
-
   const species = characterList.map( (eachCharacter) => eachCharacter.species);
 
-
-    /* OBTENER INFO CONTACTO */ 
-    const {pathname} = useLocation();
-    console.log(pathname);
-
-    const routeData = matchPath('/character/:id', pathname);
-    console.log(routeData);
+  /* Para eliminar duplicados en las opciones de los select*/
+  const newOrigins = [...new Set (origins)];
+  const newSpecies = [...new Set(species)];
 
 
-    const characterId = routeData !== null ? routeData.params.id : null ;
+  /* OBTENER INFO CONTACTO */ 
+  const {pathname} = useLocation();
+  
+  const routeData = matchPath('/character/:id', pathname);
 
-    console.log(characterId);
+  const characterId = routeData !== null ? routeData.params.id : null ;
 
-    const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
-    console.log(characterSelected);
+  const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
+  console.log(characterSelected);
    
 
   return (
         <div className="App"> 
-          <Header/>
           <Routes>
-              <Route path='/' element={
+             <Route path="/" element={<Landing />}></Route>
+              <Route path='/Home' element={
+                <><Header/>
                 <main className='main'>
                   <Filters 
                       searchByName={searchByName}  
                       searchByOrigin={searchByOrigin}
                       searchBySpecies={searchBySpecies}
-                      origins={origins} 
-                      species={species}
+                      newOrigins={newOrigins}
+                      origins={origins}
+                      newSpecies={newSpecies}
                       handleFilter={handleFilter} 
                     />
                     <CharacterList characterList={filteredCharacters} searchByName={searchByName}/>
-                 </main>}
+                 </main></>}
               />
               <Route path='/character/:id' element={<CharacterDetailCard characterSelected={characterSelected}/>}/>
               <Route path='*' element={<NotFoundPage/>}/>
