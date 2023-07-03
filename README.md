@@ -3,7 +3,7 @@
 # Module 3 | Promo T: individual evaluation exercise
 
 The final exercise for Module 3 has the following main objectives:
-- Create a web browser with Disney Characters.
+- Create a web browser with Rick & Morty Characters.
 - Filter and search options for an easy location of characters.
 - A detailed page for each character.
 
