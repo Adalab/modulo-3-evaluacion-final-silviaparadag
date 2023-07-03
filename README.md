@@ -29,18 +29,18 @@ The following issues are done:
 2. **Main/home page**. Basic design with character list, and a form with a search input to search characters by name and a select for filter characters by origin an species. In this list of articles the user can see in each character card: a photo, name, origin plante and species. With clicking in each card, tt's possible having more details, as number of episodes and status. 
 3. All the character info is **fetching by an API** request to the following website: https://rickandmortyapi.com/documentation
 4. This page is divided into **several components**, including some intermediate ones.
-5. The most remarkable components are:
+    The most remarkable components are:
     - Filters.js for the form components children: FilterByName.js, FilterByOrigin.js and FilterBySpecies.js
     - CharacterList.js for the whole list of characters, with a children EachCharacterData.js
     - CharacterDetailCard.js with a different route for the detailed information character. 
     - NotFoundPage for a compatible URL if the link is broken, whit an error message, and the option to go back to the home page.
-6. Quality details as form control, error message for unexisting characters, etc.
-7. Some of the required bonus:
+5. Quality details as form control, error message for unexisting characters, etc.
+6. Some of the required bonus:
     - As the URL mentioned above.
     - Alphabetic order of the fetch.
     - Extra filters.
     - Design issues: mobile first, responsive, icons, etc.
-8. Other extras:
+7. Other extras:
     - Landing page. 
     - Local storage.
 
