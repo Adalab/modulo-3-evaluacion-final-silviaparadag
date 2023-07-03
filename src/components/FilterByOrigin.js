@@ -16,9 +16,7 @@ const FilterByOrigin = ({searchByOrigin, newOrigins, handleFilter }) => {
             <select className="filters__input--text" name="search_origin" id="search_origin"  value={searchByOrigin} onChange={handleChangeSearchOrigin} >
                 <option value="All">Todos</option>
                 {renderOriginOptions()}
-                      {/* <option value="Krootabulon">Krootabulon</option>
-                      <option value="Kyle's Teenyverse">Kyle's Teenyverse</option>
-                      <option value="Detoxifier">Detoxifier</option> */}
+
                 </select>
     </fieldset>
 

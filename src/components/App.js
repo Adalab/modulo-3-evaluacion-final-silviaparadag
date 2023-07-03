@@ -66,16 +66,13 @@ const App = ()  => {
   const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
   const species = characterList.map( (eachCharacter) => eachCharacter.species);
 
-  /* Para eliminar duplicados en las opciones de los select*/
   const newOrigins = [...new Set (origins)];
   const newSpecies = [...new Set(species)];
 
 
-  /* OBTENER INFO CONTACTO */ 
-  const {pathname} = useLocation();
-  
-  const routeData = matchPath('/character/:id', pathname);
 
+  const {pathname} = useLocation();
+  const routeData = matchPath('/character/:id', pathname);
   const characterId = routeData !== null ? routeData.params.id : null ;
 
   const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
