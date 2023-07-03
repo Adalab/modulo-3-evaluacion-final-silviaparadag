@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom';
 import ls from '../services/localStorage';
 import callToApi from '../services/api';
 
+import Landing from './Landing';
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
@@ -83,9 +84,10 @@ const App = ()  => {
 
   return (
         <div className="App"> 
-          <Header/>
           <Routes>
-              <Route path='/' element={
+             <Route path="/" element={<Landing />}></Route>
+              <Route path='/Home' element={
+                <><Header/>
                 <main className='main'>
                   <Filters 
                       searchByName={searchByName}  
@@ -97,7 +99,7 @@ const App = ()  => {
                       handleFilter={handleFilter} 
                     />
                     <CharacterList characterList={filteredCharacters} searchByName={searchByName}/>
-                 </main>}
+                 </main></>}
               />
               <Route path='/character/:id' element={<CharacterDetailCard characterSelected={characterSelected}/>}/>
               <Route path='*' element={<NotFoundPage/>}/>

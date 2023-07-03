@@ -7,7 +7,7 @@ const FilterByName = ({searchByName, handleFilter}) => {
 return (
     <fieldset className="filters__name">
       <label className="filters__label" htmlFor="search_name">
-                  Nombre</label>
+                  Search character</label>
       <input className="filters__input--text" type="text" name="search_name" placeholder='Alien Rick' id="search_name" value={searchByName} onChange={handleChangeSearchName} />
     </fieldset>
 );

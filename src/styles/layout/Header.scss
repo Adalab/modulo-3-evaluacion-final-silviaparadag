@@ -12,7 +12,12 @@
 
     &__img {
         padding: 35px;
-        width: 80vw;
+        width: 80%;
+
+        &:hover {
+            width: 83vw;
+            transition: all 0.2s ease;
+        }
 
         @include Tablet() {
             width: 70%;
@@ -22,7 +27,5 @@
             width: 50%;
         }
     }
-
-    &__subtitle {}
 
 }

@@ -15,7 +15,7 @@ const CharacterList = ({characterList, searchByName}) => {
             <i className="cards__error--icon fa-regular fa-face-rolling-eyes"></i>
             <span className="cards__error--span">{searchByName}</span> 
             <p className='cards__error--message'>
-                   isn't a character</p>
+                   "{searchByName}" isn't a name character</p>
          </div>);
     }
     }

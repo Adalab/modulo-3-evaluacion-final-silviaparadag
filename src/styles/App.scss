@@ -8,6 +8,7 @@
 @import './layout/EachCharacterData';
 @import './layout/NotFoundPage';
 @import './layout/Footer';
+@import './layout/Landing';
 
 
 .App {
@@ -16,5 +17,5 @@
 }
 
 .main {
-    padding: 20px;
+    padding: 50px 30px 50px;
 }

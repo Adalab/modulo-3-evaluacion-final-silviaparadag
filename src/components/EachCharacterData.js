@@ -11,7 +11,7 @@ return (
             <div className="card__item--info">
                 <h2 className='character__title'>{eachCharacterData.name}</h2>
                 <p className='character__text'>{eachCharacterData.species}</p>
-                <p className='character__text'><i className="fa-solid fa-globe"></i> {eachCharacterData.origin}</p>
+                <p className='character__text'><i className="character__text--icon fa-solid fa-globe"></i> {eachCharacterData.origin}</p>
             </div>
          </article>
      </Link>

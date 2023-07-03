@@ -11,7 +11,7 @@ const FilterByOrigin = ({searchByOrigin, newOrigins, handleFilter }) => {
     return (
     <fieldset className="filters__origin">
         <label className="filters__label" htmlFor="search_origin">
-                  <i className="fa-solid fa-globe"></i>   Planeta
+                    Filter by planet
         </label>
             <select className="filters__input--text" name="search_origin" id="search_origin"  value={searchByOrigin} onChange={handleChangeSearchOrigin} >
                 <option value="All">Todos</option>

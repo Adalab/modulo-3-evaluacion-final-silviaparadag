@@ -1,6 +1,7 @@
-import '../styles/layout/Header.scss';
 import logo from '../images/rick_and_morty_logo.png'
 import { Link } from 'react-router-dom';
+
+import '../styles/layout/Header.scss';
 
 const Header = () => {
     
