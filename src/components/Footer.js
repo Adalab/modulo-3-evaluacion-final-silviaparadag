@@ -4,7 +4,8 @@ const Footer = () => {
     
     return(
        <footer className='footer'>
-          <p className="footer__text">Adalab 2023 © Trótula promotion</p>
+          <span className="footer__text"> ©  <a href="https://adalab.es/bootcamp-programacion/" target="_blank" rel="noreferrer" className="footer__text--link">Adalab 2023</a></span>
+          <span className="footer__text">Trótula promotion</span>
         </footer>
     )
 }

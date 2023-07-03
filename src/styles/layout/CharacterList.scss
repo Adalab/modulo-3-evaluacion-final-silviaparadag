@@ -1,0 +1,41 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+
+.cards {
+    text-decoration: none;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    &__error {
+        height: 200px;
+        padding: 30px;
+        background-color: #c3ffc02f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        border-radius: 30px;
+
+        &--icon {
+            font-size: 2rem;
+            color: #56a896;
+        }
+
+        &--span {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: regular;
+            padding-right: 10px;
+        }
+
+        &--message {
+            font-size: .8rem;
+        }
+    }
+}

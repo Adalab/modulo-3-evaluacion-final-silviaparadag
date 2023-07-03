@@ -1,27 +1,34 @@
 import FilterByOrigin from './FilterByOrigin';
 import FilterByName from './FilterByName';
+import FilterBySpecies from './FilterBySpecies';
 
-const Filters = ({searchByName, origins, searchByOrigin,handleFilter}) => {
+import '../styles/layout/Filters.scss';
+
+const Filters = ({searchByName, newOrigins, searchByOrigin, newSpecies, searchBySpecies, handleFilter}) => {
 
 
     const handleSubmit = (ev) => {
     ev.preventDefault();
         }
 
-return (
-
-    <form className="filters" onSubmit={handleSubmit} >
+    return (
+        <form className="filters" onSubmit={handleSubmit} >
             <FilterByName 
             searchByName={searchByName} 
             handleFilter={handleFilter}/>
 
             <FilterByOrigin  
-            origins={origins} 
+            newOrigins={newOrigins} 
             searchByOrigin={searchByOrigin} 
             handleFilter={handleFilter}/>
-    </form>
 
-);
-}
+            <FilterBySpecies 
+            newSpecies={newSpecies} 
+            searchBySpecies={searchBySpecies} 
+            handleFilter={handleFilter}/>
+        </form>
+
+    );
+};
 
 export default Filters;

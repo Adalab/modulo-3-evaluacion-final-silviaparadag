@@ -1,9 +1,10 @@
 const callToApi = () => {
-  return fetch('https://rickandmortyapi.com/api/character/?page=19')
+  return fetch('https://rickandmortyapi.com/api/character')
     .then((response) => response.json())
     .then((dataApi) => {
       console.log(dataApi.results);
-      const cleanDataApi = dataApi.results.map( (characterApi) =>  { return {
+      const cleanDataApi = dataApi.results
+        .map( (characterApi) =>  { return {
                 id: characterApi.id,
                 name: characterApi.name,
                 species: characterApi.species,
@@ -12,10 +13,12 @@ const callToApi = () => {
                 origin: characterApi.origin.name,
                 episodes: characterApi.episode.length,
            }
-        });
-        console.log(cleanDataApi);
-        return cleanDataApi;
+        })
+        .sort( (a, b) => a.name.localeCompare(b.name) );
+      console.log(cleanDataApi);
+      return cleanDataApi;
       });
-};
+}; 
 
 export default callToApi;
+

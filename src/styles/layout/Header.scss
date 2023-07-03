@@ -1,29 +1,31 @@
 @import '../core/variables';
+@import '../core/mixins';
 
 .header {
     padding: 10px 10px 10px;
     text-align: center;
-    border-bottom: dotted 2px lightgray;
-    margin-bottom: 20px;
     font-family: $font-main;
-    background-image: url("../../images/rick_and_morty_bgd.jpeg");
+    background-image: linear-gradient(to bottom, #91cecebc 25%, #b4c4c4bc), url("../../images/rick_and_morty_bgd.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
+    &__img {
+        padding: 35px;
+        width: 80%;
 
-    &__title {
-        color: gray;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 5px;
-    }
+        &:hover {
+            width: 83vw;
+            transition: all 0.2s ease;
+        }
 
-    &__subtitle {
-        color: lightcoral;
-        font-size: 16px;
-        padding: 5px;
+        @include Tablet() {
+            width: 70%;
+        }
+
+        @include Desktop() {
+            width: 50%;
+        }
     }
 
 }

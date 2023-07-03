@@ -1,6 +1,21 @@
 @import './core/reset';
-@import './layout/Main';
+@import './core/variables';
+@import './core/mixins';
+@import './layout/Header';
+@import './layout/Filters';
+@import './layout/CharacterList';
+@import './layout/CharacterDetailCard';
+@import './layout/EachCharacterData';
+@import './layout/NotFoundPage';
+@import './layout/Footer';
+@import './layout/Landing';
+
 
 .App {
-    height: 100vh;
+    height: 100%;
+    background-color: rgba(101, 187, 198, 0.776);
+}
+
+.main {
+    padding: 50px 30px 50px;
 }

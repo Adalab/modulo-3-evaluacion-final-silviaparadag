@@ -1,0 +1,76 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+
+.article {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.article {
+    &__link {
+        background-color: $color-primary;
+        padding: 15px;
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-family: $font-main;
+        font-size: 0.7rem;
+
+        &--icon {
+            font-size: 1.3rem;
+            color: $color-primary2;
+        }
+
+        &:hover {
+            background-color: $color-primary3;
+            color: $color-secondary2;
+            box-shadow: 0 4px 6px $color-secondary;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        font-family: $font-main;
+        padding: 30px;
+        background-color: $color-primary;
+        border-radius: 30px;
+
+        &--img {
+            border-radius: 30px;
+        }
+
+        &--title {
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        &--text {
+            font-size: .85rem;
+
+        }
+
+        &--text2 {
+            font-family: $font-secondary4;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        &--text3 {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    }
+}
