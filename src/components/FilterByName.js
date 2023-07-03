@@ -5,11 +5,11 @@ const FilterByName = ({searchByName, handleFilter}) => {
   };
 
 return (
-    <>
-    <label className="filters__label" htmlFor="search_name">
-                Nombre:</label>
-    <input className="filters__input--text" type="text" name="search_name" id="search_name" value={searchByName} onChange={handleChangeSearchName} />
-        </>
+    <fieldset className="filters__name">
+      <label className="filters__label" htmlFor="search_name">
+                  Nombre</label>
+      <input className="filters__input--text" type="text" name="search_name" placeholder='Alien Rick' id="search_name" value={searchByName} onChange={handleChangeSearchName} />
+    </fieldset>
 );
 }
 

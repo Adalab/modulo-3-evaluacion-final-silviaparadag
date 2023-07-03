@@ -61,27 +61,24 @@ const App = ()  => {
     }
   });
 
+
   const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
-
-  // const origins = ['Krootabulon', "Kyle's Teenyverse", 'Detoxifier', 'Earth (Replacement Dimension)', 'Gazorpazorp' ];
-
   const species = characterList.map( (eachCharacter) => eachCharacter.species);
 
-
-    /* OBTENER INFO CONTACTO */ 
-    const {pathname} = useLocation();
-    console.log(pathname);
-
-    const routeData = matchPath('/character/:id', pathname);
-    console.log(routeData);
+  /* Para eliminar duplicados en las opciones de los select*/
+  const newOrigins = [...new Set (origins)];
+  const newSpecies = [...new Set(species)];
 
 
-    const characterId = routeData !== null ? routeData.params.id : null ;
+  /* OBTENER INFO CONTACTO */ 
+  const {pathname} = useLocation();
+  
+  const routeData = matchPath('/character/:id', pathname);
 
-    console.log(characterId);
+  const characterId = routeData !== null ? routeData.params.id : null ;
 
-    const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
-    console.log(characterSelected);
+  const characterSelected = characterList.find( (character) => parseInt(character.id) === parseInt(characterId));
+  console.log(characterSelected);
    
 
   return (
@@ -94,8 +91,9 @@ const App = ()  => {
                       searchByName={searchByName}  
                       searchByOrigin={searchByOrigin}
                       searchBySpecies={searchBySpecies}
-                      origins={origins} 
-                      species={species}
+                      newOrigins={newOrigins}
+                      origins={origins}
+                      newSpecies={newSpecies}
                       handleFilter={handleFilter} 
                     />
                     <CharacterList characterList={filteredCharacters} searchByName={searchByName}/>
