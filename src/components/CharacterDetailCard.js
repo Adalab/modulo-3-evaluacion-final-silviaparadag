@@ -30,7 +30,7 @@ const CharacterDetailCard = ({characterSelected}) => {
                 <p className='article__item--text'>Episodes num: <span className='article__item--text3'>{characterSelected.episodes}</span></p>
                 
             </article>
-            <Link  className='article__link'to="/"> <i className="article__link--icon fa-solid fa-arrow-left"></i></Link>
+            <Link  className='article__link'to="/Home"> <i className="article__link--icon fa-solid fa-arrow-left"></i></Link>
      </div>)
     } else {
         return (
