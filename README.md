@@ -14,7 +14,7 @@ In this web you have an initial landing page that invites you to access the brow
 
 &nbsp;
 
-The following issues are done:
+## The following issues are done:
 
 1. **Landing page**. When loading the page, you have and intro that invites the user to looking for more information.
 2. **Main/home page**. Basic design with character list, and a form with a search input to search characters by name and a select for filter characters by origin an species. In this list of articles the user can see in each character card: a photo, name, origin plante and species. With clicking in each card, tt's possible having more details, as number of episodes and status. 
