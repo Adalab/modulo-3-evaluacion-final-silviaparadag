@@ -11,19 +11,10 @@ The final exercise for Module 3 has the following main objectives:
 In this web you have an initial landing page that invites you to access the browser. In the browser home page, you can use a search engine to find your favorite characters, and you can also filter by origin and species.
 
 
-&nbsp;
-## Tools ⚒️
-
-- `HTML, CSS, Saas, JavaScript, React Framework`
-- `Visual Studio Code`
-- `React Starter Kit`
-- `GitHub`
-- `GitHub Pages`
-
 
 &nbsp;
 
-The following issues are done:
+## The following issues are done:
 
 1. **Landing page**. When loading the page, you have and intro that invites the user to looking for more information.
 2. **Main/home page**. Basic design with character list, and a form with a search input to search characters by name and a select for filter characters by origin an species. In this list of articles the user can see in each character card: a photo, name, origin plante and species. With clicking in each card, tt's possible having more details, as number of episodes and status. 
@@ -45,6 +36,16 @@ The following issues are done:
     - Local storage.
     - Testing
     - Loader component.
+  
+
+&nbsp;
+## Tools ⚒️
+
+- `HTML, CSS, Saas, JavaScript, React Framework`
+- `Visual Studio Code`
+- `React Starter Kit`
+- `GitHub`
+- `GitHub Pages`
 
 
 &nbsp;
