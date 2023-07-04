@@ -43,6 +43,8 @@ The following issues are done:
 7. Other extras:
     - Landing page. 
     - Local storage.
+    - Testing
+    - Loader component.
 
 
 &nbsp;
