@@ -1,0 +1,26 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center;
+
+    &__icon {
+        background-color: $color-secondary2;
+        border: 16px solid $color-primary4;
+        border-top: 16px solid $color-secondary3;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

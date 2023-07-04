@@ -7,7 +7,6 @@ const FilterByOrigin = ({searchByOrigin, newOrigins, handleFilter }) => {
     const renderOriginOptions = () => {
     return newOrigins.map( (eachOrigin, ind) =>  (<option key={ind} value={eachOrigin}>{eachOrigin}</option>));
     };
-    console.log(newOrigins);
     return (
     <fieldset className="filters__origin">
         <label className="filters__label" htmlFor="search_origin">

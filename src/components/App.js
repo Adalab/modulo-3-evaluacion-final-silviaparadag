@@ -14,6 +14,7 @@ import NotFoundPage from './NotFoundPage';
 import Footer from './Footer';
 
 import '../styles/App.scss';
+import Loader from './Loader';
 
 const App = ()  => {
   const characterSelectedFromLs = ls.get('characters', [])
@@ -22,13 +23,16 @@ const App = ()  => {
   const [searchByName, setSearchByName] = useState('');
   const [searchByOrigin, setSearchByOrigin] = useState('All');
   const [searchBySpecies, setSearchBySpecies] = useState('All');
+  const [isLoading, setIsLoading] = useState(false);
  
  
 
   useEffect( () => {
     if (ls.get('characters', null) === null) { 
-    callToApi().then((cleanDataApi) => {
-      setCharacterList(cleanDataApi);
+      setIsLoading(true);
+      callToApi().then((cleanDataApi) => {
+        setCharacterList(cleanDataApi);
+        setIsLoading(false);
       ls.set('characters', cleanDataApi)
     })
   }
@@ -96,7 +100,7 @@ const App = ()  => {
                       newSpecies={newSpecies}
                       handleFilter={handleFilter} 
                     />
-                    <CharacterList characterList={filteredCharacters} searchByName={searchByName}/>
+                    {isLoading ? <Loader/> : <CharacterList characterList={filteredCharacters} searchByName={searchByName} />}
                  </main></>}
               />
               <Route path='/character/:id' element={<CharacterDetailCard characterSelected={characterSelected}/>}/>
