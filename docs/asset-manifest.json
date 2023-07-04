@@ -2,6 +2,7 @@
   "files": {
     "main.css": "./static/css/main.620aaf71.css",
     "main.js": "./static/js/main.8ed81d5d.js",
+
     "static/media/rick_and_morty_bgd.jpeg": "./static/media/rick_and_morty_bgd.407b1b023c2e85b89796.jpeg",
     "static/media/rick_and_morty_nfp.jpeg": "./static/media/rick_and_morty_nfp.0f217ff68ecfd5f949b0.jpeg",
     "static/media/rick_and_morty_logo.png": "./static/media/rick_and_morty_logo.df73b7db546a5a50f92d.png",
