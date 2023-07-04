@@ -11,15 +11,6 @@ The final exercise for Module 3 has the following main objectives:
 In this web you have an initial landing page that invites you to access the browser. In the browser home page, you can use a search engine to find your favorite characters, and you can also filter by origin and species.
 
 
-&nbsp;
-## Tools ⚒️
-
-- `HTML, CSS, Saas, JavaScript, React Framework`
-- `Visual Studio Code`
-- `React Starter Kit`
-- `GitHub`
-- `GitHub Pages`
-
 
 &nbsp;
 
@@ -45,6 +36,16 @@ The following issues are done:
     - Local storage.
     - Testing
     - Loader component.
+  
+
+&nbsp;
+## Tools ⚒️
+
+- `HTML, CSS, Saas, JavaScript, React Framework`
+- `Visual Studio Code`
+- `React Starter Kit`
+- `GitHub`
+- `GitHub Pages`
 
 
 &nbsp;
