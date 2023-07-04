@@ -23,6 +23,7 @@ const App = ()  => {
   const [searchByOrigin, setSearchByOrigin] = useState('All');
   const [searchBySpecies, setSearchBySpecies] = useState('All');
  
+ 
 
   useEffect( () => {
     if (ls.get('characters', null) === null) { 

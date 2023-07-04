@@ -1,4 +1,4 @@
-const Loader = () => {
+const Loader = ({isLoading}) => {
 
     return (
         <></>
