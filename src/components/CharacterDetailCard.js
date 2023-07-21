@@ -43,27 +43,3 @@ const CharacterDetailCard = ({characterSelected}) => {
 
 
 export default CharacterDetailCard;
-
-/* 
-
-if (characterSelected) {}
-
-
-else {
-        return (
-             <NotFoundPage/> 
-        )
-    }
-
-
-
-
-else {
-    return (
-        <div>
-             <p className='text-error'>Lo sentimos, ese contacto no existes</p>
-             <Link to="/">Volver</Link>
-        </div>
-    )
-}
-*/

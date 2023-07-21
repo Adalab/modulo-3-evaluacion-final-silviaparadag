@@ -44,7 +44,7 @@ const App = ()  => {
       setSearchByName(varValue);
     } if (varName === 'origin') {
       setSearchByOrigin(varValue);
-    } else if (varName === 'species') {
+    } else {
       setSearchBySpecies(varValue);
     }
   };
@@ -53,20 +53,11 @@ const App = ()  => {
   const filteredCharacters = characterList
     .filter( (eachCharacter) => 
   eachCharacter.name.toLowerCase().includes(searchByName.toLowerCase()))
-    .filter( (eachCharacter) => {
-    if (searchByOrigin === 'All') {
-      return true;
-    } else {
-      return eachCharacter.origin === searchByOrigin;
-    }
-  }).filter( (eachCharacter) => {
-    if (searchBySpecies === 'All') {
-      return true;
-    } else {
-      return eachCharacter.species === searchBySpecies;
-    }
-  });
-
+    .filter( (eachCharacter) => (
+      searchByOrigin === 'All'? true : eachCharacter.origin === searchByOrigin
+    ))
+    .filter( (eachCharacter) => (
+      searchBySpecies === 'All' ? true: eachCharacter.species === searchBySpecies));
 
   const origins = characterList.map( (eachCharacter) => eachCharacter.origin);
   const species = characterList.map( (eachCharacter) => eachCharacter.species);

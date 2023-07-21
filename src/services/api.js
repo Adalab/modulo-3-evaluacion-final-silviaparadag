@@ -2,7 +2,6 @@ const callToApi = () => {
   return fetch('https://rickandmortyapi.com/api/character')
     .then((response) => response.json())
     .then((dataApi) => {
-      console.log(dataApi.results);
       const cleanDataApi = dataApi.results
         .map( (characterApi) =>  { return {
                 id: characterApi.id,
@@ -15,7 +14,6 @@ const callToApi = () => {
            }
         })
         .sort( (a, b) => a.name.localeCompare(b.name) );
-      console.log(cleanDataApi);
       return cleanDataApi;
       });
 }; 
