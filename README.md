@@ -1,8 +1,9 @@
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+![LandingPage](https://github.com/silviaparadag/module-3-evaluation/assets/130361802/14a35a75-1b75-439b-a23c-638aa2994d78)
 
-# Module 3 | Promo T: individual evaluation exercise
 
-The final exercise for Module 3 has the following main objectives:
+# Rick & Morty Characters Searcher
+
+This exercise  has the following main objectives:
 - Create a web browser with Rick & Morty Characters.
 - Filter and search options for an easy location of characters.
 - A detailed page for each character.
@@ -14,7 +15,7 @@ In this web you have an initial landing page that invites you to access the brow
 
 &nbsp;
 
-## The following issues are done:
+## The following issues are done: 
 
 1. **Landing page**. When loading the page, you have and intro that invites the user to looking for more information.
 2. **Main/home page**. Basic design with character list, and a form with a search input to search characters by name and a select for filter characters by origin an species. In this list of articles the user can see in each character card: a photo, name, origin plante and species. With clicking in each card, tt's possible having more details, as number of episodes and status. 
@@ -47,6 +48,20 @@ In this web you have an initial landing page that invites you to access the brow
 - `GitHub`
 - `GitHub Pages`
 
+&nbsp;
+
+## Starting the project 🚀
+To start the project, download the repository and run the following line in your terminal to install the node modules folder.
+
+~~~
+npm install
+~~~
+To be able to view the page in the browser, run:
+
+~~~
+npm start
+~~~
+In the src folder you can find the development files of the project In the docs folder you can find the files uploaded on GitHubPages
 
 &nbsp;
 
@@ -58,6 +73,3 @@ In this web you have an initial landing page that invites you to access the brow
 *"Welcome to club, pal."* Rick
 
 © Adalab 2023 | Trótula Promotion
-
-
-
