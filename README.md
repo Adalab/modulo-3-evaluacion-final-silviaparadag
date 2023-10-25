@@ -75,4 +75,4 @@ In the `src` folder you can find the development files of the project In the `do
 
 *"Welcome to club, pal."* Rick
 
-© Adalab 2023 | Trótula Promotion
+© Silvia Parada | 2023 
