@@ -47,7 +47,6 @@ In this web you have an initial landing page that invites you to access the brow
 - `JavaScript`
 - `React`
 - `Visual Studio Code`
-- `React`
 - `GitHub`
 - `GitHub Pages`
 
