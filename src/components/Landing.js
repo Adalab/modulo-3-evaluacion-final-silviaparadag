@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import logo from '../images/rick_and_morty_logo.png'
-
 import '../styles/layout/Landing.scss';
 
 const Landing = () => {
@@ -11,7 +9,8 @@ const Landing = () => {
         Discover more about
         <span className="landing__title--strong">Rick and Morty</span>
       </p>
-      <Link className='landing__btn' to="/Home">more
+      <Link className="landing__btn" to="/Home">
+        more
       </Link>
     </div>
   );
