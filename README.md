@@ -42,9 +42,12 @@ In this web you have an initial landing page that invites you to access the brow
 &nbsp;
 ## Tools ⚒️
 
-- `HTML, CSS, Saas, JavaScript, React Framework`
+- `HTML`
+- `CSS, Saas`
+- `JavaScript`
+- `React`
 - `Visual Studio Code`
-- `React Starter Kit`
+- `React`
 - `GitHub`
 - `GitHub Pages`
 
