@@ -1,10 +1,11 @@
 ![LandingPage](https://github.com/silviaparadag/module-3-evaluation/assets/130361802/14a35a75-1b75-439b-a23c-638aa2994d78)
 
 
-# Rick & Morty Characters Finder
+# ![faviconR_M](https://github.com/silviaparadag/rick-and-morty-character-finder/assets/130361802/44e57b62-894f-43f9-8e00-66c9f945f03a) Rick & Morty Characters Finder
+
 
 This exercise  has the following main objectives:
-- Create a web browser with Rick & Morty Characters.
+- Create a web browser with Rick & Morty characters.
 - Filter and search options for an easy location of characters.
 - A detailed page for each character.
 
@@ -15,7 +16,7 @@ In this web you have an initial landing page that invites you to access the brow
 
 &nbsp;
 
-## The following issues are done: 
+## ![faviconR_M](https://github.com/silviaparadag/rick-and-morty-character-finder/assets/130361802/44e57b62-894f-43f9-8e00-66c9f945f03a) The following issues are done: 
 
 1. **Landing page**. When loading the page, you have and intro that invites the user to looking for more information.
 2. **Main/home page**. Basic design with character list, and a form with a search input to search characters by name and a select for filter characters by origin an species. In this list of articles the user can see in each character card: a photo, name, origin plante and species. With clicking in each card, tt's possible having more details, as number of episodes and status. 
@@ -46,6 +47,7 @@ In this web you have an initial landing page that invites you to access the brow
 - `CSS, Saas`
 - `JavaScript`
 - `React`
+- `JSX`
 - `Visual Studio Code`
 - `GitHub`
 - `GitHub Pages`
@@ -81,6 +83,12 @@ npm start
 
 &nbsp;
 
-*"Welcome to club, pal."* Rick
+*"Welcome to club, pal."* 
+&nbsp;
+
+Rick
+
+&nbsp;
+
 
 © Silvia Parada | 2023 
