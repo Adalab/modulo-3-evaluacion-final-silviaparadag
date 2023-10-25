@@ -40,7 +40,7 @@ In this web you have an initial landing page that invites you to access the brow
   
 
 &nbsp;
-## Tools ⚒️
+## ⚒️ | Tools 
 
 - `HTML`
 - `CSS, Saas`
@@ -53,18 +53,27 @@ In this web you have an initial landing page that invites you to access the brow
 
 &nbsp;
 
-## Starting the project 🚀
-To start the project, download the repository and run the following line in your terminal to install the node modules folder.
+## 🎲 | Getting started
 
+1. To start the project, download or fork the repository.
+
+2. To install NPM packages & dependencies, run the following line in your terminal:
 ~~~
 npm install
 ~~~
-To be able to view the page in the browser, run:
 
+3. To be able to view the page in the browser, run:
 ~~~
 npm start
 ~~~
-In the `src` folder you can find the development files of the project In the `docs` folder you can find the files uploaded on GitHubPages
+
+> **Note** In this project, we can find the following files and folders:
+>- The folder 📂 `src/` is the files of this web page: HTML, SCSS, JavaScript and images.
+>- The folders 📚 `public/` and `docs/`, are generated automatically when we start the project. GULP reads the files found in the src/ folder, processes them and then generates them inside `public/` and `docs/`.
+>- Other 📝 files found in the repository root as 'gulpfile.js', 'package.json', etc. are configuration files and we don't need to modify them.
+>-  To publish on GitHub Pages and generate your page for production run the command: `npm run githubpages`
+
+
 
 &nbsp;
 
