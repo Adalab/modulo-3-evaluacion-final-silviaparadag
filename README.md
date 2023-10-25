@@ -1,7 +1,7 @@
 ![LandingPage](https://github.com/silviaparadag/module-3-evaluation/assets/130361802/14a35a75-1b75-439b-a23c-638aa2994d78)
 
 
-# Rick & Morty Characters Searcher
+# Rick & Morty Characters Finder
 
 This exercise  has the following main objectives:
 - Create a web browser with Rick & Morty Characters.
@@ -61,7 +61,7 @@ To be able to view the page in the browser, run:
 ~~~
 npm start
 ~~~
-In the src folder you can find the development files of the project In the docs folder you can find the files uploaded on GitHubPages
+In the `src` folder you can find the development files of the project In the `docs` folder you can find the files uploaded on GitHubPages
 
 &nbsp;
 
