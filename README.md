@@ -90,4 +90,4 @@ Rick
 &nbsp;
 
 
-© Silvia Parada | 2023 
+<p align="center" style="color:gray; font-size:12px"> © Silvia Parada | 2023</p>
